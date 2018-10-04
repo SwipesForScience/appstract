@@ -1,4 +1,4 @@
-# Example Swipes for Science configuration
+# Example Swipes for Science configuration to annotate PubMed Abstracts
 
 [![Build Status](https://travis-ci.org/SwipesForScience/testConfig.svg?branch=master)](https://travis-ci.org/SwipesForScience/testConfig)
 
