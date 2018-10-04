@@ -1,0 +1,22 @@
+sudo: false
+language: node_js
+node_js:
+- '6.0'
+cache:
+  directories: 
+branches:
+  only:
+  - master
+notifications:
+  email: false
+before_script:
+- bash ./scripts/prepare.sh
+script:
+- cd SwipesForScience; npm run build
+after_success:
+- cd ..; bash ./scripts/deploy.sh
+env:
+  global:
+  - GH_USER: SwipesForScience
+  - GH_REPO: appstract
+  - secure: kXkfNAIW29TYioIUfQmqGxqJonq2HhSLJCMoMksXpSUYVnBP+P1JjeE+BbTFbIQyWZzg0zw6DOxmEOatFR+NK3mhva1a4jnyNhSgzTMciqOVmI54C+4k5wDHCI3EpSxBg8y+MBojONGdH8ivDZgI5OafQ64goe5Uft8HYwSps2W3KDIWz+5+m11JdKtLRy+9mGMUk0Axmu/Asw/4Rj8cTZClxxnzbgDsvMYt075TZ5eMUL3nFmF3H0yY9nsfTFUEaJ1ZmBTq9DGKnHhM59NPgkjFmd51m64BZeiDFo4ONisSXgfD5LkdYuIbMeNWJIiRs8jLFKaql3+ugDcTo2JNYyh/rAckn6BQXsKaASbnbFlcWRshijgONR9TNBbVQaNXB1c9lEm6bZbYXpDIvMeDiZSQGSGxlnk+jAAnDZ69WdHjHbI4jhNI6IBTmfGiHdnrSeiyPUgYwx52yvtd8E55whXGCvXlr3oO+P8q9n9q8bmOq8PVg6rniqTBFZwegPxIat1BO/YUdAay2PA6ecdtMj6kN9kzh21F5r4gYBrgMB4EP5tlFCSxy5Q7Pn+OJxePcUSKpNjciQxA3rlzkar5d8Atl+WpFsK/hgfqz9PbbCugh1Ngiqkq+urR48BYP8rJwztOVhcQPthHB070D9VgypLLyImpcBuXu5203v4+O3Y=
