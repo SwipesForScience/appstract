@@ -1,6 +1,6 @@
-# Example Swipes for Science configuration
+# Example Swipes for Science configuration to annotate PubMed Abstracts
 
-[![Build Status](https://travis-ci.org/SwipesForScience/testConfig.svg?branch=master)](https://travis-ci.org/SwipesForScience/testConfig)
+[![Build Status](https://travis-ci.org/SwipesForScience/testConfig.svg?branch=master)](https://travis-ci.org/SwipesForScience/appstract)
 
 Hello 👋! Thanks for checking out this example Swipes for Science app. This example repo has all you need to configure your own Swipes for Science (S4S) app. 
 
