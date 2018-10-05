@@ -2,7 +2,7 @@ export default {
 
   // if set to true, the user will be routed to /tutorial instead of /play if
   // they haven't taken a tutorial
-  needsTutorial: true,
+  needsTutorial: false,
 
   // each time the app is run, it will check this manifest and update the firebase database
   // if new entries are there, they will be added, and entries that aren't in the manifest
@@ -20,9 +20,10 @@ export default {
   //   delimiter: '__',
   // },
 
-  widgetType: 'PubMedAbstract',
+  widgetType: 'PubMedNLP',
   widgetProperties: {
-  
+    template: 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id={0}&tool=appstract&email=keshavan@berkeley.edu&retmode=xml',
+    delimiter: null,
   },
 
 
@@ -42,12 +43,16 @@ export default {
 
   // Homepage configuration
 
+  app: {
+    navbarVariant: 'danger',
+  },
+
   // your app's title and tagline
   home: {
     title: 'appstract',
     tagline: 'Help scientists annotate abstracts',
     // background image on Homepage
-    backgroundUrl: 'https://cdn.rawgit.com/SwipesForScience/appstract/master/images/SwipesForScience.svg',
+    backgroundUrl: 'https://cdn.rawgit.com/akeshavan/appstract/master/src/assets/landingIcon.svg',
   },
 
   // Play configuration
@@ -76,13 +81,13 @@ export default {
     // that the widget will display
     steps: {
       intro: [
-        /*{
-          text: 'we want to train a machine to recognize the whales and dolphins. \n For that we need your help.',
+        /*  {
+          text: '',
           image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Gnome-computer.svg/600px-Gnome-computer.svg.png',
-        },*/
+        }, */
       ],
       examples: [
-        /*{
+        /* {
           // fill these with examples with respect to the widget you're using
           text: 'swipe right when you hear/see a whale \n you can tap the image to hear it.',
           pointer: 'OO_HYVM1__YDH_2017_10_06T06_48_00',
@@ -92,7 +97,7 @@ export default {
         {
           text: 'Are you ready to play?',
           tutorialCompleted: true,
-        },*/
+        }, */
       ],
     },
   },
